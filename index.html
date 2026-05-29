@@ -57,7 +57,7 @@
                     
                 <body>
                 
-                <h1>Welcome to PadhakuGang</h1>
+                <h1 id = "main-title">Welcome to PadhakuGang</h1>
                 <p>Study together, grow together</p>
                 <p> soon my dream project will run here </p>
 
@@ -105,12 +105,12 @@
 
                 <div class = "right-panel">
                     <h2> Join PadhakuGang </h2>
-                    <input type="text" placeholder = "Enter your name">
+                    <input type="text" id="username-input" placeholder = "Enter your name">
                     <br>
                     <input type="password" placeholder = "Enter password">
                     <br>
-                    <button>Login</button>
-
+                    <button onclick = "changeTitle()">Login</button>
+                    
                     
                    <p>Total: <span> 85 students</span> online!</p>
 
@@ -122,11 +122,13 @@
 
 
                 <script>
-                    function sayHello()  {
-                        console.log("Button was clicked");
+                    function changeTitle() {
+                   let name = document.getElementById("username-input").value;
+                   let title = document.getElementById("main-title");
+                   title.innerText = "Welcome " +name+ "!";
                     }
-                    
-
+                              
+    
                 </script>
                 
                 </body>
