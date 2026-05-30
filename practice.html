@@ -13,7 +13,8 @@
             <div id = "colorBox"> Hello! I will change color</div>
             <button onclick = "changeColor()">change color</button>
 
-
+            <h1 id = "counter">0</h1>
+            <button onclick = "increaseCounter()"> Click Me </button>
 
 
         <script>
@@ -27,8 +28,13 @@
             if(count > colors.length-1) {
                 count = 0;
             }
-            
-          }
+                  }
+
+            function increaseCounter()   {
+                let counter = document.getElementById("counter");
+                let currentValue = parseInt(counter.innerText);
+                counter.innerText = currentValue + 1;
+            }
 
         </script>
 
