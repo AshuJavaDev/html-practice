@@ -16,6 +16,11 @@
             <h1 id = "counter">0</h1>
             <button onclick = "increaseCounter()"> Click Me </button>
 
+            <h1 id = "text"> Text Box </h1>
+            <button onclick = "textFlashing()"> Click Me   </button>
+
+            <h1 id = "flash"> flash box </h1>
+            <button onclick = "flashBox()"> click me</button>
 
         <script>
 
@@ -35,6 +40,26 @@
                 let currentValue = parseInt(counter.innerText);
                 counter.innerText = currentValue + 1;
             }
+
+            function textFlashing() {
+                let text = document.getElementById("text");
+                text.style.color = "red";
+                setTimeout(() => {
+                    text.style.color = "black";
+                }, 1000);
+            }
+
+            function flashBox() {
+                if( count%2 ==0)   {
+                    document.getElementById("flash").style.visibility = "hidden";
+                }    else     {
+                    document.getElementById("flash").style.visibility = "visible";
+                }   
+                    count++;
+                }
+                
+                
+            
 
         </script>
 
