@@ -141,24 +141,20 @@
                         title.style.backgroundColor = "#00d4aa";
                         message.innerText = "";
                     }
+                }
 
+                    
 
-                    let title = document.getElementById("main-title");
-                    title.innerText = "welcome " + name + " to PadhakuGang";
-                    title.style.color = "#1a1a2e";
-                    title.style.backgroundColor = "#00d4aa";
-                   }
-                   
                    let rooms = document.getElementsByClassName("room-card");
                    console.log(rooms);
 
                    function highlightRooms() {
                     let rooms = document.getElementsByClassName("room-card");
                     for(let i = 0; i<rooms.length; i++)  {
-                        rooms[i].style.backgroundcolor = "#00d4aa";
+                        rooms[i].style.backgroundColor = "#00d4aa";
                         rooms[i].style.color = "#1a1a2e";
                     }
-                   }
+                }
 
                 </script>
 
