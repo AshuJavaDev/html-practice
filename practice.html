@@ -22,6 +22,18 @@
             <h1 id = "flash"> flash box </h1>
             <button onclick = "flashBox()"> click me</button>
 
+        
+           <h2> To Do List </h2>
+            <input type = "text" id = "todoinput" placeholder = "Enter to do items">
+            <button onclick = "addTodo()"> Add Todo </button>
+            <ul id = "todoList"> </ul>
+
+
+            
+
+
+
+
         <script>
 
             let colors = ["red", "blue", "green", "yellow", "orange"];
@@ -58,8 +70,14 @@
                     count++;
                 }
                 
-                
+            function addTodo()  {
+            let task = document.getElementById("todoinput").value;
+            let li = document.createElement("li");
+            li.innerText = task;
+            document.getElementById("todoList").appendChild(li);
+            document.getElementById("todoinput").value = "";
             
+        }
 
         </script>
 
