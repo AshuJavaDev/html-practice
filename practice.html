@@ -29,6 +29,12 @@
             <ul id = "todoList"> </ul>
 
 
+           <input type = "color" id = "colorPicker">
+
+
+
+             
+
             
 
 
@@ -76,8 +82,11 @@
             li.innerText = task;
             document.getElementById("todoList").appendChild(li);
             document.getElementById("todoinput").value = "";
-            
-        }
+            }
+
+
+      document.getElementById("colorPicker").addEventListener("input", function() { document.body.style.backgroundColor = this.value; });
+        
 
         </script>
 
