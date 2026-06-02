@@ -45,9 +45,8 @@
 
             <button onclick = "validateForm()"> Submit </button> 
              
-
-            
-
+              
+  
 
 
 
@@ -98,6 +97,34 @@
 
       document.getElementById("colorPicker").addEventListener("input", function() { document.body.style.backgroundColor = this.value; });
         
+   
+
+             function	validateForm()		{
+
+            let name = document.getElementById("name").value;
+            if( name == null || name == "")	{
+            document.getElementById("nameError").innerText = "Name is required";
+            }   else    {
+                document.getElementById("nameError").innerText="";
+            }
+
+            let email = document.getElementById("email").value;
+            if(email==null || email =="")	{
+            document.getElementById("emailError").innerText="email is required";
+            }   else      {
+                document.getElementById("emailError").innerText="";
+            }
+
+            let password = document.getElementById("password").value;
+            if(password==null||password==""|| password.length<6)	{
+            document.getElementById("passwordError").innerText="password is required";
+            }   else    {
+               document.getElementById("passwordError").innerText="";
+                }
+            }
+       
+
+
 
         </script>
 
