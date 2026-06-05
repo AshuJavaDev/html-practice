@@ -58,7 +58,9 @@
 
             <p id = "result"> </p>
 
-  
+
+            <h2>Price List with 10% Discount </h2> 
+                <ul id="PriceList"> </ul>
 
 
 
@@ -172,12 +174,32 @@
                     } 
 
                      document.getElementById("result").innerText = "result: " +result;
-
-
             }
 
+            // Practice Map()
 
-            
+            let numbers = [1,2,3,4,5];
+            let doubled = numbers.map(num => num*2);
+            console.log(doubled);
+
+            // Try with strings !
+                let names = ["ashu", "rahul", "priya"];
+                let upperNames = names.map(name => name.toUpperCase());
+                console.log(upperNames);
+
+               
+            //  Price Discount Calculator
+
+            let prices = [100,200,300,400,500];
+            let discounted = prices.map( price => price*0.9);
+
+            discounted.map( price => { 
+                let li = document.createElement("li");
+                li.innerText = "Rs. " + price;
+                document.getElementById("PriceList").appendChild(li);
+            });
+
+
        
 
 
