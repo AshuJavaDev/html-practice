@@ -63,6 +63,10 @@
                 <ul id="PriceList"> </ul>
 
 
+                // Student Fiter App
+
+            <h2> Student Filter </h2>
+            <div id = "studentList"> </div>
 
         <script>
 
@@ -200,6 +204,42 @@
             });
 
 
+            // Practice Filter()
+
+            let nu = [1,2,3,4,5];
+            let evenNumbers = nu.filter(num => num%2 == 0);
+            console.log(evenNumbers);
+
+            let name = ["ashu", "rahul", "priya", "anil", "sita"];
+            let starts = name.filter(name => name.startsWith("a"));
+            let nameWithA = name.filter(name => name.includes("a"));
+            console.log(nameWithA);
+            console.log(starts);
+
+            let rate = [100,200,300,400,500];
+            let expensive = rate.filter(price => price > 300);
+            console.log(expensive);
+
+
+            // Student Filter App
+
+            let students = [
+                {name: "Ashu", marks: 85},
+                {name: "Rahul", marks: 78},
+                {name: "Priya", marks: 92},
+                {name: "Anil", marks: 65},
+                {name: "Sita", marks: 55},
+                {name: "Ravi", marks: 80}
+            ];
+
+            function showStudents(arr)  {
+                let div = document.getElementById("studentList");
+                div.innerHTML = "";
+                arr.forEach(student => {
+                    div.innerHTML += `<p>  ${student.name} - ${student.marks} </p>`;
+                });
+            }
+                    showStudents(students);
        
 
 
