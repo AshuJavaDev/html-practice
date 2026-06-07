@@ -68,6 +68,10 @@
             <h2> Student Filter </h2>
             <div id = "studentList"> </div>
 
+            <button onclick = "filterStudents()"> Show Above 60 </button>
+            <button onclick = "showStudents(students)"> Show All </button>
+
+
         <script>
 
             let colors = ["red", "blue", "green", "yellow", "orange"];
@@ -241,6 +245,11 @@
             }
                     showStudents(students);
        
+                function filterStudents()   {
+                    let passed = students.filter( student => student.marks > 60);
+                    showStudents(passed);
+
+                }
 
 
 
