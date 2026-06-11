@@ -17,12 +17,31 @@
 
                 let allUsers = [];
 
-                fetch("https://jsonplaceholder.typicode.com/users")
-                    .then(response => response.json())
-                    .then(data =>  {
+                // // old way
+
+                // fetch("https://jsonplaceholder.typicode.com/users")
+                //     .then(response => response.json())
+                //     .then(data =>  {
+                //         allUsers = data;
+                //         showUsers(allUsers);
+                //     });
+
+
+                    // New way - async/await
+                    async function getUsers()  {
+                        try { 
+                        let response = await fetch("https://jsonplaceholder.typicode.com/users");
+                        let data = await response.json();
                         allUsers = data;
                         showUsers(allUsers);
-                    });
+                    }     catch(error)   {
+                        console.error("Error: ", error);
+                    }
+                }
+
+                    getUsers();
+
+
 
                     function showUsers(users)  {
                         let div = document.getElementById("userList");
