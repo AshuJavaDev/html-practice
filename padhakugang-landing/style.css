@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f0f1a;
+    color: #ffffff;
+}
+
+nav {
+    padding: 20px 40px;
+    background-color: #1a1a1a;
+}
+
+nav h1 {
+    color: #f5a623;
+    font-size: 28px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    color: #f5a623;
+    margin-bottom: 10px;
+}
